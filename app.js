@@ -9,7 +9,7 @@ var app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-mongoose.connect("mongodb+srv://anish:anishtest@cluster0.zf1or.mongodb.net/test?retryWrites=true&w=majority");
+mongoose.connect("mongodb+srv://anish:anishtest@cluster0.zf1or.mongodb.net/test?retryWrites=true&w=majority",{ useNewUrlParser: true,useUnifiedTopology: true });
 
 
 app.post('/read', async(req,res)=>{
