@@ -17,9 +17,11 @@ app.post('/read', async(req,res)=>{
     try{
 
         var data=req.body;
+        console.log(data);
 
-        var studentData=new studModel(data);
+        var studentData=new studModel(req.body);
 
+        console.log(studentData);
         var result=await studentData.save();
 
         res.json(result);

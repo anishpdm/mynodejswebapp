@@ -9,6 +9,6 @@ const studentSchema = new mongoose.Schema({
 
 });
 
-var studentModel = mongoose.model('mystudents', studentSchema);
+var studModel = mongoose.model('mystudents', studentSchema);
 
-module.exports={studentModel}
+module.exports={studModel}
