@@ -86,6 +86,6 @@ app.post("/search",async(req,res)=>{
 
 
 
-app.listen(process.env.PORT || 3000, function() {
+app.listen( 3000, function() {
     console.log('Your node js server is running at http://localhost:3000');
 });
