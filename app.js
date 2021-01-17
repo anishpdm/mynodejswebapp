@@ -38,6 +38,24 @@ app.post('/read', async(req,res)=>{
 })
 
 
+app.get("/viewall",async(req,res)=>{
+
+    try{
+       
+        var result= await studModel.find().exec();
+
+        res.json(result);
+        
+
+    }
+    catch(error){
+        console.log(error)
+        res.status(500).send(error)
+    }
+
+})
+
+
 app.listen(process.env.PORT || 3000, function() {
     console.log('Your node js server is running at http://localhost:3000');
 });
