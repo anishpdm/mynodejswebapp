@@ -13,6 +13,11 @@ app.use(bodyParser.urlencoded({ extended: true }));
 mongoose.connect("mongodb://localhost:27017/testdb", { useNewUrlParser: true });
 
 
+app.get("/",(req,res)=>{
+
+    res.send("hello")
+})
+
 app.post('/read', async(req,res)=>{
 
     try{
